@@ -1,0 +1,309 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width:1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation Bar */
+
+header{
+    background-image: url('../images/image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    /* background: pink; */
+    height: 700px;
+}
+
+header nav{
+    padding: 2rem 0;
+}
+
+header nav .left{
+    text-transform: uppercase;
+    color: white;
+}
+
+header nav .right a{
+    color: white;
+    text-decoration:none;
+    margin-right: 2rem;
+}
+
+header nav .right a:hover{
+    color: black;
+    transition: all .3s ease;
+}
+
+section.navigation .content-row{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+section.navigation .left-col  .right-col{
+    flex-basis: 50%;
+}
+
+section.navigation .left-col {
+    padding: 170px 0;
+}
+
+section.navigation .search{
+    width: 260px;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius :20px;
+}
+
+section.navigation .search input{
+    width: 100%;
+    outline: none;
+    border: 0;
+    color: white;
+    background: transparent;
+    font-size: 14px;
+}
+
+section.navigation h1{
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: white;
+    padding: 50px 0 30px;
+}
+
+section.navigation .indicator{
+    display: flex;
+}
+
+section.navigation span{
+    width: 5px;
+    height: 5px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* About Us */
+
+section.about{
+    padding: 6rem 0;
+}
+
+section.about .about-me-img{
+    height: 300px;
+}
+
+section.about h1{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+section.about p{
+    font-family:'Lato', sans-serif;
+    color: var(--ternary);
+    line-height:1.9;
+    margin-bottom: 2rem;
+}
+
+section.about .social{
+    display:flex;
+}
+
+section.about .social a{
+    background: var(--dark);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+}
+
+section.about .social a img{
+    height:20px;
+    border-radius:50%;
+}
+
+section.about .social a:hover{
+    background: var(--primary);
+    transition: all .3s ease;
+}
+
+
+/* Image Slider */
+
+section.img{
+    padding: 10rem 0;
+    background-color:#ffe8e8;
+}
+section.img .image{
+    width: 200px;
+    height: 200px;
+    transition: width 2s, height 2s, transform 2s;
+    margin: 0px 90px;
+    border-radius: 60px;
+    box-shadow: 6px 6px 7px gray;
+}
+
+section.img .image:hover{
+    width: 300px;
+    height: 300px;
+    transform: rotate(0deg);
+    border-radius: 0px;
+    transition: all 0.8s ease;
+}
+
+/* map */
+
+section.map{
+    padding: 100px;
+}
+section.map .content{
+    text-align: center;
+}
+
+/* Reviews */
+
+section.reviews{
+    background: #e6e6e6;
+    padding-top : 2.5rem;
+    padding-bottom: 5rem;
+}
+
+section.reviews .card-wrapper{
+    display:grid;
+    grid-template-columns: repeat( 3, 1fr);
+    grid-column-gap: 6rem;
+    grid-row-gap: 2rem;
+}
+
+section.reviews .card-wrapper .card{
+    background: #ffffff;
+    padding: 3rem 2rem ;
+    position: relative;
+    border-radius: 10px;
+}
+
+section.reviews .card-wrapper .card img{
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    position: absolute;
+    top: -2.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.reviews .card-wrapper .card h2{
+    text-align:center;
+}
+
+section.reviews .card-wrapper .card p{
+    text-align:center;
+}
+
+section.reviews .card-wrapper .one:hover{
+    background:#fff8d2 ;
+    transition: all .3s ease;
+}
+
+section.reviews .card-wrapper .two:hover{
+    background:#ffd7e9 ;
+    transition: all .3s ease;
+}
+
+section.reviews .card-wrapper .three:hover{
+    background:#e4fcf9;
+    transition: all .3s ease;
+}
+
+/* ContactUs */
+section.contactus, section.footer{
+    background: #002651;
+}
+
+section.contactus .heading{
+    color:white;
+    font-weight: normal;
+    padding-top: 2rem;
+    margin-bottom: 2rem;  
+}
+
+section.contactus .card-wrapper{
+    display:grid;
+    grid-template-columns: repeat( 3, 1fr);
+    grid-column-gap: 12rem;
+    grid-row-gap: 2rem;
+    color: white;
+    line-height: 2rem;
+    padding: 2rem;
+    padding-bottom: 5rem;
+}
+
+section.contactus .center{
+    padding-top: 4rem;
+    color: #cccccc;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+section.contactus .one{
+    color: #cccccc;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: right;
+}
+
+/* Footer */
+section.footer{
+    color: #cccccc;
+    padding-top: 1rem;
+    padding-bottom: 1.3rem;
+    background: #071e3d;
+    font-family: 'Didact Gothic', sans-serif;
+}
