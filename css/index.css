@@ -14,6 +14,30 @@ body{
     margin: 0 auto;
 }
 
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
 .flex{
     display: flex;
 }
@@ -146,7 +170,6 @@ section.about h1{
 
 section.about p{
     font-family:'Lato', sans-serif;
-    color: var(--ternary);
     line-height:1.9;
     margin-bottom: 2rem;
 }
@@ -306,4 +329,378 @@ section.footer{
     padding-bottom: 1.3rem;
     background: #071e3d;
     font-family: 'Didact Gothic', sans-serif;
+}
+
+.site-main-wrapper{
+    position: relative;
+}
+
+.hamberger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index:11;
+    background:none;
+    border:none;
+    outline:none; 
+}
+
+.hamberger img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background:white;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+}
+
+.open{
+    transform: translateX(0);
+}
+
+.times{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.times img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.mobile-nav ul{
+    list-style-type: none;
+}
+
+.mobile-nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+@media (max-width: 1024px){
+    header #main-nav{
+        display: none;
+    }
+    .header{
+        /* background-attachment: none; */
+        width: 1024px;
+    }
+    section.navigation .content-row h1{
+        font-size: 35px;
+    }
+    section.navigation .content-row .search{
+        width: 200px;
+    }
+    section.about .about-me-img{
+        height:250px;
+    }
+    section.about p{
+        font-family:'Lato', sans-serif;
+        line-height:1.6;
+        margin-bottom: 2rem;
+    }
+    section.img{
+        padding: 7rem 0;
+        width: 100%;
+    }
+    section.img .image{
+        width:160px;
+        height: 160px;
+        margin: 0px 75px;
+    }
+    section.img .image:hover{
+        width: 260px;
+        height: 260px;
+        transform: rotate(0deg);
+        border-radius: 0px;
+        transition: all 0.8s ease;
+    }
+    section.map{
+        padding: 100px 30px;
+    }
+    section.map iframe{
+        width: 850px;
+        /* border-radius: 30px; */
+    }
+    section.reviews{
+        padding-top : 4rem;
+        padding-bottom: 5rem;
+    }
+    section.reviews .card-wrapper .card{
+        padding: 2rem 1rem ;
+        position: relative;
+        border-radius: 10px;
+    }
+}
+
+
+@media (max-width: 768px){
+    header #main-nav{
+        display: none;
+    }
+    .header{
+        /* background-attachment: none; */
+        width: 768px;
+    }
+    section.navigation .content-row h1{
+        font-size: 32px;
+    }
+    section.navigation .content-row .search{
+        width: 180px;
+    }
+    section.about .about-me-img{
+        height:225px;
+    }
+    section.about p{
+        font-family:'Lato', sans-serif;
+        line-height:1.4;
+        margin-bottom: 2rem;
+    }
+    section.img{
+        padding: 7rem 0;
+        width: 100%;
+    }
+    section.img .image{
+        width:160px;
+        height: 160px;
+        margin: 0px 37px;
+    }
+    section.img .image:hover{
+        width: 230px;
+        height: 230px;
+        transform: rotate(0deg);
+        border-radius: 0px;
+        transition: all 0.8s ease;
+    }
+    section.map{
+        padding: 100px 30px;
+    }
+    section.map iframe{
+        width: 690px;
+        /* border-radius: 30px; */
+    }
+    section.reviews{
+        padding-top : 4rem;
+        padding-bottom: 5rem;
+    }
+    section.reviews .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat( 1, 1fr);
+        grid-column-gap: 9rem;
+        grid-row-gap: 4rem;
+    }
+    section.reviews .card-wrapper .card{
+        padding: 3rem 1.5rem 1.5rem 1.5rem ;
+        position: relative;
+        border-radius: 10px;
+    }
+    section.contactus .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat( 3, 1fr);
+        grid-column-gap: 5rem;
+        grid-row-gap: 2rem;
+        color: white;
+        line-height: 2rem;
+        padding: 2rem;
+        padding-bottom: 5rem;
+    }
+    section.contactus .center{
+        font-size:1.5rem;
+    }
+    
+}
+
+
+@media (max-width: 576px){
+    header #main-nav{
+        display: none;
+    }
+    .header{
+        width: 576px;
+    }
+    section.navigation .content-row h1{
+        font-size: 32px;
+    }
+    section.navigation .content-row .search{
+        width: 180px;
+    }
+
+    section.about .about-inner-wrapper{
+        flex-direction: column;
+    }
+
+    section.about .right{
+        text-align:center;
+        margin-top:2rem;
+    }
+
+    section.about .right .social{
+        justify-content: center;
+    }
+
+    section.about .about-me-img{
+        height:225px;
+    }
+    section.about p{
+        font-family:'Lato', sans-serif;
+        line-height:1.4;
+        margin-bottom: 2rem;
+    }
+    section.img{
+        padding: 7rem 0;
+        width: 100%;
+    }
+    section.img .image{
+        width:160px;
+        height: 160px;
+        margin: 0px 5px;
+    }
+    section.img .image:hover{
+        width: 210px;
+        height: 210px;
+        transform: rotate(0deg);
+        border-radius: 0px;
+        transition: all 0.8s ease;
+    }
+    section.map{
+        padding: 70px 20px;
+    }
+    section.map iframe{
+        width: 520px;
+        /* border-radius: 30px; */
+    }
+    section.reviews{
+        padding-top : 4rem;
+        padding-bottom: 5rem;
+    }
+    section.reviews .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat( 1, 1fr);
+        grid-column-gap: 9rem;
+        grid-row-gap: 4rem;
+    }
+    section.reviews .card-wrapper .card{
+        padding: 3rem 1.5rem 1.5rem 1.5rem ;
+        position: relative;
+        border-radius: 10px;
+    }
+    section.contactus .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat( 3, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        color: white;
+        line-height: 2rem;
+        padding: 2rem;
+        padding-bottom: 5rem;
+    }
+    section.contactus .center{
+        font-size:1.5rem;
+    }
+    
+}
+
+@media (max-width: 415px){
+    header #main-nav{
+        display: none;
+    }
+    .header{
+        width: 415px;
+    }
+    section.navigation .content-row h1{
+        font-size: 32px;
+    }
+    section.navigation .content-row .search{
+        width: 180px;
+    }
+
+    section.about .about-inner-wrapper{
+        flex-direction: column;
+    }
+
+    section.about .right{
+        text-align:center;
+        margin-top:2rem;
+    }
+
+    section.about .right .social{
+        justify-content: center;
+    }
+
+    section.about .about-me-img{
+        height:225px;
+    }
+    section.about p{
+        font-family:'Lato', sans-serif;
+        line-height:1.4;
+        margin-bottom: 2rem;
+    }
+    section.img{
+        padding: 7rem 0;
+        width: 100%;
+    }
+    section.img .image{
+        width:160px;
+        height: 160px;
+        margin: 0px 5px;
+    }
+    section.img .image:hover{
+        width: 210px;
+        height: 210px;
+        transform: rotate(0deg);
+        border-radius: 0px;
+        transition: all 0.8s ease;
+    }
+    section.map{
+        padding: 70px 20px;
+    }
+    section.map iframe{
+        width: 520px;
+        /* border-radius: 30px; */
+    }
+    section.reviews{
+        padding-top : 4rem;
+        padding-bottom: 5rem;
+    }
+    section.reviews .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat( 1, 1fr);
+        grid-column-gap: 9rem;
+        grid-row-gap: 4rem;
+    }
+    section.reviews .card-wrapper .card{
+        padding: 3rem 1.5rem 1.5rem 1.5rem ;
+        position: relative;
+        border-radius: 10px;
+    }
+    section.contactus .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat( 3, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        color: white;
+        line-height: 2rem;
+        padding: 2rem;
+        padding-bottom: 5rem;
+    }
+    section.contactus .center{
+        font-size:1.5rem;
+    }
+    
 }
