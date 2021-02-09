@@ -122,6 +122,7 @@ section.navigation .search{
     box-sizing: border-box;
     border: 1px solid;
     border-radius :20px;
+    color: white;
 }
 
 section.navigation .search input{
@@ -152,6 +153,9 @@ section.navigation span{
     margin-right: 5px;
 }
 
+section.navigation .left img{
+    height: 140px;
+}
 /* About Us */
 
 section.about{
@@ -407,6 +411,9 @@ section.footer{
     section.navigation .content-row .search{
         width: 200px;
     }
+    section.navigation .left img{
+        height: 140px;
+    }
     section.about .about-me-img{
         height:250px;
     }
@@ -463,6 +470,9 @@ section.footer{
     }
     section.navigation .content-row .search{
         width: 180px;
+    }
+    section.navigation .left img{
+        height: 180px;
     }
     section.about .about-me-img{
         height:225px;
@@ -540,7 +550,12 @@ section.footer{
     section.navigation .content-row .search{
         width: 180px;
     }
-
+    section.about .about-me-img{
+        height:225px;
+    }
+    section.navigation .left img{
+        height: 120px;
+    }
     section.about .about-inner-wrapper{
         flex-direction: column;
     }
@@ -616,15 +631,16 @@ section.footer{
     
 }
 
-@media (max-width: 415px){
+@media (max-width: 414.4px){
     header #main-nav{
         display: none;
     }
     .header{
-        width: 415px;
+        width: 414px;
+        height: 300px;
     }
     section.navigation .content-row h1{
-        font-size: 32px;
+        font-size: 30px;
     }
     section.navigation .content-row .search{
         width: 180px;
@@ -652,13 +668,16 @@ section.footer{
         margin-bottom: 2rem;
     }
     section.img{
-        padding: 7rem 0;
+        padding: 2rem 0;
         width: 100%;
+    }
+    section.img .img-inner-wrapper{
+        flex-direction: column;
     }
     section.img .image{
         width:160px;
         height: 160px;
-        margin: 0px 5px;
+        margin: 6px 5px;
     }
     section.img .image:hover{
         width: 210px;
@@ -668,10 +687,10 @@ section.footer{
         transition: all 0.8s ease;
     }
     section.map{
-        padding: 70px 20px;
+        /* padding: 40px 10px; */
     }
     section.map iframe{
-        width: 520px;
+        width: 340px;
         /* border-radius: 30px; */
     }
     section.reviews{
@@ -691,16 +710,116 @@ section.footer{
     }
     section.contactus .card-wrapper{
         display:grid;
-        grid-template-columns: repeat( 3, 1fr);
+        grid-template-columns: repeat( 1, 1fr);
         grid-column-gap: 2rem;
         grid-row-gap: 2rem;
         color: white;
-        line-height: 2rem;
-        padding: 2rem;
+        line-height: 1.5rem;
+        /* padding: 2rem; */
         padding-bottom: 5rem;
     }
     section.contactus .center{
         font-size:1.5rem;
     }
-    
+    section.contactus .one{
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px){
+    header #main-nav{
+        display: none;
+    }
+    .header{
+        width: 320px;
+        height: 300px;
+    }
+    section.navigation .content-row h1{
+        font-size: 30px;
+    }
+    section.navigation .content-row .search{
+        width: 150px;
+    }
+
+    section.about .about-inner-wrapper{
+        flex-direction: column;
+    }
+
+    section.about .right{
+        text-align:center;
+        margin-top:2rem;
+    }
+
+    section.about .right .social{
+        justify-content: center;
+    }
+
+    section.about .about-me-img{
+        height:200px;
+    }
+    section.about p{
+        font-family:'Lato', sans-serif;
+        line-height:1.4;
+        margin-bottom: 2rem;
+    }
+    section.img{
+        padding: 2rem 0;
+        width: 100%;
+    }
+    section.img .img-inner-wrapper{
+        flex-direction: column;
+    }
+    section.img .image{
+        width:160px;
+        height: 160px;
+        margin: 6px 5px;
+    }
+    section.img .image:hover{
+        width: 210px;
+        height: 210px;
+        transform: rotate(0deg);
+        border-radius: 0px;
+        transition: all 0.8s ease;
+    }
+    section.map{
+        padding: 40px 4px;
+    }
+    section.map iframe{
+        width: 260px;
+        /* border-radius: 30px; */
+    }
+    section.reviews{
+        padding-top : 4rem;
+        padding-bottom: 5rem;
+    }
+    section.reviews .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat( 1, 1fr);
+        grid-column-gap: 9rem;
+        grid-row-gap: 4rem;
+    }
+    section.reviews .card-wrapper .card{
+        padding: 3rem 1.5rem 1.5rem 1.5rem ;
+        position: relative;
+        border-radius: 10px;
+    }
+    section.contactus .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat( 1, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        color: white;
+        line-height: 1.0rem;
+        /* padding: 2rem; */
+        padding-bottom: 5rem;
+    }
+    section.contactus .center{
+        font-size:1.5rem;
+    }
+    section.contactus .one{
+        text-align: center;
+    }
+    .mobile-nav ul li a{
+        font-size: 1rem;
+    }
 }
